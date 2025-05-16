@@ -5,54 +5,31 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = function () {
 
-let who = ['The dog ', 'My grandma ', 'The mailman ', 'My bird '];
-let action = ['ate ', 'peed ', 'crushed ', 'broke '];
-let what = ['my homework ', 'my phone ', 'the car '];
-let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+  let who = ['The dog ', 'My grandma ', 'The mailman ', 'My bird '];
+  let action = ['ate ', 'peed ', 'crushed ', 'broke '];
+  let what = ['my homework ', 'my phone ', 'the car '];
+  let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-let whoR = obtenerNumeroAleatorio(who);
-let actionR = obtenerNumeroAleatorio(action);
-let whatR = obtenerNumeroAleatorio(what);
-let whenR = obtenerNumeroAleatorio(when);
+  let whoRandom = getRandomNumber(who);
+  let actionRandom = getRandomNumber(action);
+  let whatRandom = getRandomNumber(what);
+  let whenRandom = getRandomNumber(when);
 
-let randomsentence = whoR + "" + actionR + "" + whatR + "" + whenR;
+  let randomExcuse = whoRandom + "" + actionRandom + "" + whatRandom + "" + whenRandom;
 
-  // document.getElementById("excuse").innerHTML = randomsentence ();
+  let randomSentence = document.getElementById("excuse");
+  randomSentence.innerHTML = randomExcuse;
+};
 
-let resultado = document.getElementById("excuse");
-resultado.innerHTML = randomsentence;
-  };
+function getRandomNumber(Random) {
 
-function obtenerNumeroAleatorio (aleatorio){
-
-  return aleatorio[Math.floor(Math.random() * aleatorio.length)];
+  return Random[Math.floor(Math.random() * Random.length)];
 
 };
 
-
-// function excusas () {
-
-  // let who = ['The dog ', 'My grandma ', 'The mailman ', 'My bird '];
-  // let action = ['ate ', 'peed ', 'crushed ', 'broke '];
-  // let what = ['my homework ', 'my phone ', 'the car '];
-  // let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
-
-//   let whoR = who[Math.floor(Math.random() * who.length)];
-//   let actionR = action[Math.floor(Math.random() * action.length)];
-//   let whatR = what[Math.floor(Math.random() * what.length)];
-//   let whenR = when[Math.floor(Math.random() * when.length)];
-
-// return whoR + "" + actionR + "" + whatR + "" + whenR;
-
-// };
-
-
-
-
-
-  console.log("Hello Rigo from the console!");
+// console.log("Hello Rigo from the console!");
 
 
 
